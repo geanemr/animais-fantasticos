@@ -16,5 +16,4 @@ export default function initSmoothScroll() {
       link.addEventListener("click", scrollToSection);
     });
   }
-  initSmoothScroll();
   

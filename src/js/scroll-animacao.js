@@ -18,4 +18,3 @@ export default function initScrollAnimation() {
       window.addEventListener("scroll", animeScroll);
     }
   }
-  initScrollAnimation();
