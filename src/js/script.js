@@ -3,9 +3,11 @@ import initScrollAnimation from "./scroll-animacao.js";
 import initAccordion from "./accordion.js";
 import initTabNav from "./tabnav.js";
 import initModal from "./modal.js";
+import initTooltip from "./tooltip.js";
 
 initSmoothScroll();
 initScrollAnimation();
 initAccordion();
 initTabNav();
 initModal();
+initTooltip();
