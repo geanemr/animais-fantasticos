@@ -7,7 +7,8 @@ import initTooltip from "./tooltip.js";
 import initDropdownMenu from "./dropdown-menu.js";
 import initMobileMenu from "./mobile-menu.js";
 import initOpeningHours from "./opening-hours.js";
-import initFetchAnimais from "./fetch-animais.js";
+import initFetchAnimals from "./fetch-animals.js";
+import initFetchBitcoin from "./fetch-bitcoin.js";
 
 initSmoothScroll();
 initScrollAnimation();
@@ -18,4 +19,5 @@ initTooltip();
 initDropdownMenu();
 initMobileMenu();
 initOpeningHours();
-initFetchAnimais();
+initFetchAnimals();
+initFetchBitcoin();
