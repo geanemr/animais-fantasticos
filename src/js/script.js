@@ -6,8 +6,8 @@ import initModal from "./modal.js";
 import initTooltip from "./tooltip.js";
 import initDropdownMenu from "./dropdown-menu.js";
 import initMobileMenu from "./mobile-menu.js";
-import initAnimaNumbers from "./numbers-anima.js";
 import initOpeningHours from "./opening-hours.js";
+import initFetchAnimais from "./fetch-animais.js";
 
 initSmoothScroll();
 initScrollAnimation();
@@ -17,5 +17,5 @@ initModal();
 initTooltip();
 initDropdownMenu();
 initMobileMenu();
-initAnimaNumbers();
 initOpeningHours();
+initFetchAnimais();
