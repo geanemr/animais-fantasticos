@@ -7,5 +7,5 @@ export default function initFetchBitcoin() {
     })
     .catch(erro => {
       console.log(Error(erro));
-    })
+    });
 }
