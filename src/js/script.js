@@ -1,6 +1,6 @@
 import SmoothScroll from "./scroll-suave.js";
+import Accordion from "./accordion.js";
 import initScrollAnimation from "./scroll-animation.js";
-import initAccordion from "./accordion.js";
 import initTabNav from "./tabnav.js";
 import initModal from "./modal.js";
 import initTooltip from "./tooltip.js";
@@ -13,8 +13,10 @@ import initFetchBitcoin from "./fetch-bitcoin.js";
 const smoothScroll = new SmoothScroll('.js-menu a[href^="#"]')
 smoothScroll.init();
 
+const accordion = new Accordion(".faq-lista dt")
+accordion.init();
+
 initScrollAnimation();
-initAccordion();
 initTabNav();
 initModal();
 initTooltip();
