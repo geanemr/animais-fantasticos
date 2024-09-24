@@ -1,22 +1,38 @@
-export default function initModal() {
-  const modalContainer = document.querySelector('[data-modal="container"]');
-  const openModal = document.querySelector('[data-modal="abrir"]');
-  const closeModal = document.querySelector('[data-modal="fechar"]');
+export default class Modal {
+  constructor(openModal, closeModal, modalContainer) {
+    this.openModal = document.querySelector(openModal);
+    this.closeModal = document.querySelector(closeModal);
+    this.modalContainer = document.querySelector(modalContainer);
+    //bind this ao objeto para fazer referência ao objeto da classe
+    this.eventToggleModal = this.eventToggleModal.bind(this);
+    this.clickOutsideModal = this.clickOutsideModal.bind(this);
+  }
 
-  if (modalContainer && openModal && closeModal) {
-    function toggleModal(event) {
-      event.preventDefault();
-      modalContainer.classList.toggle("ativo");
+  toggleModal() {
+    this.modalContainer.classList.toggle("ativo");
+  }
+
+  eventToggleModal(event) {
+    event.preventDefault();
+    this.toggleModal();
+  }
+
+  clickOutsideModal(event) {
+    if (event.target === this.modalContainer) {
+      this.toggleModal();
     }
+  }
 
-    function clickOutsideModal(event) {
-      if (event.target === this) {
-        toggleModal(event);
-      }
+  addModalEvents() {
+    this.openModal.addEventListener("click", this.eventToggleModal);
+    this.closeModal.addEventListener("click", this.eventToggleModal);
+    this.modalContainer.addEventListener("click", this.clickOutsideModal);
+  }
+
+  init() {
+    if (this.modalContainer && this.openModal && this.closeModal) {
+      this.addModalEvents();
     }
-
-    openModal.addEventListener("click", toggleModal);
-    closeModal.addEventListener("click", toggleModal);
-    modalContainer.addEventListener("click", clickOutsideModal);
+    return this; //para o this do modal ser o objeto dele mesmo, que é criado com a classe. Sem retornar this, é undefined. Assim posso linkar outro método em script.js
   }
 }
