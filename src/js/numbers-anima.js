@@ -3,7 +3,7 @@ export default class AnimaNumbers {
     this.numbers = document.querySelectorAll(numbers);
   }
 
-  incrementNumber(number) {
+  static incrementNumber(number) { //static porque não precisa do objeto para funcionar
     const total = +number.innerText;
     const incremento = Math.floor(total / 100);
     let start = 0;
@@ -18,11 +18,11 @@ export default class AnimaNumbers {
   }
 
   animaNumbers() {
-    this.numbers.forEach((number) => this.incrementNumber(number));
+    this.numbers.forEach((number) => this.constructor.incrementNumber(number));
   }
 
   init() {
-    if (this.numbers) {
+    if (this.numbers.length) {
       this.animaNumbers();
     }
     return this;
