@@ -7,28 +7,32 @@ import initScrollAnimation from "./scroll-animation.js";
 import initDropdownMenu from "./dropdown-menu.js";
 import initMobileMenu from "./mobile-menu.js";
 import initOpeningHours from "./opening-hours.js";
-import initFetchAnimals from "./fetch-animals.js";
+import fetchAnimals from "./fetch-animals.js";
 import initFetchBitcoin from "./fetch-bitcoin.js";
 
-const smoothScroll = new SmoothScroll('.js-menu a[href^="#"]')
+const smoothScroll = new SmoothScroll('.js-menu a[href^="#"]');
 smoothScroll.init();
 
-const accordion = new Accordion(".faq-lista dt")
+const accordion = new Accordion(".faq-lista dt");
 accordion.init();
 
-const tabNav = new TabNav(".js-tabmenu li", ".js-tabcontent section")
+const tabNav = new TabNav(".js-tabmenu li", ".js-tabcontent section");
 tabNav.init();
 
-const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]' )
+const modal = new Modal(
+  '[data-modal="abrir"]',
+  '[data-modal="fechar"]',
+  '[data-modal="container"]'
+);
 modal.init();
 
-const tooltip = new Tooltip("[data-tooltip]")
+const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
+fetchAnimals("./animaisapi.json", ".numeros-grid");
 
 initScrollAnimation();
 initDropdownMenu();
 initMobileMenu();
 initOpeningHours();
-initFetchAnimals();
 initFetchBitcoin();
