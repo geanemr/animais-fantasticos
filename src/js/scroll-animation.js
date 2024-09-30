@@ -1,4 +1,4 @@
-import debounce from "./outside-click";
+import debounce from "./debounce";
 
 export default class ScrollAnima {
   constructor(sections) {
