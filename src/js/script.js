@@ -6,7 +6,7 @@ import Tooltip from "./tooltip.js";
 import ScrollAnima from "./scroll-animation.js";
 import DropdownMenu from "./dropdown-menu.js";
 import MobileMenu from "./mobile-menu.js";
-import initOpeningHours from "./opening-hours.js";
+import OpeningHours from "./opening-hours.js";
 import fetchAnimals from "./fetch-animals.js";
 import fetchBitcoin from "./fetch-bitcoin.js";
 
@@ -38,9 +38,9 @@ dropdownMenu.init();
 const mobileMenu = new MobileMenu('[data-menu="button"]', '[data-menu="list"]');
 mobileMenu.init();
 
+const openingHours = new OpeningHours("[data-semana]", "ativo");
+openingHours.init();
+
 fetchAnimals("./animaisapi.json", ".numeros-grid");
 
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
-
-
-initOpeningHours();
