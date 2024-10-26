@@ -9,6 +9,7 @@ import initMobileMenu from "./mobile-menu.js";
 import initOpeningHours from "./opening-hours.js";
 import initFetchAnimals from "./fetch-animals.js";
 import initFetchBitcoin from "./fetch-bitcoin.js";
+import SlideNav from "./slide.js";
 
 initSmoothScroll();
 initScrollAnimation();
@@ -21,3 +22,9 @@ initMobileMenu();
 initOpeningHours();
 initFetchAnimals();
 initFetchBitcoin();
+
+const slide = new SlideNav(".slide", ".slide-wrapper");
+
+slide.init();
+
+slide.addControl(".custom-controls");
