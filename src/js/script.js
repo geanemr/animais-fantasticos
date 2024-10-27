@@ -42,7 +42,7 @@ mobileMenu.init();
 const openingHours = new OpeningHours("[data-semana]", "ativo");
 openingHours.init();
 
-fetchAnimals("/animais-fantasticos/animaisapi.json", ".numeros-grid");
+fetchAnimals("https://geanemr.github.io/animais-fantasticos/animaisapi.json", ".numeros-grid");
 
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
